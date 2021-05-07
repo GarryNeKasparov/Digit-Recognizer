@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <script>
+    function print() {
+      var status = document.getElementById("status")
+      status.innerHTML = "Draw a digit"
+    }
+    function pred() {
+      var status = document.getElementById("status")
+      status.innerHTML = "I think it's"
+    }
+  </script>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <title>
+    Digit Recognizer
+  </title>
+</head>
+
+<body onload="print()">
+  
+  <p class="title">CNN with MNIST + PyTorch</p>
+  <div class="item">
+    <canvas id="input"></canvas>
+    <button onclick="print()" id="clear">Clear</button>
+    <button onclick="pred()" id="predict">Predict</button>
+    <p><span id="status"></span></p>
+  </div>
+  
+
+</body>
+
+</html>
