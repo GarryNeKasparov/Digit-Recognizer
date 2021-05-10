@@ -2,16 +2,6 @@
 <html>
   
 <head>
-  <script>
-    function print() {
-      var status = document.getElementById("status")
-      status.innerHTML = "Draw a digit"
-    }
-    function pred() {
-      var status = document.getElementById("status")
-      status.innerHTML = "I think it's"
-    }
-  </script>
   {% load static %}
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
   <title>
@@ -19,14 +9,14 @@
   </title>
 </head>
 
-<body onload="print()">
+<body>
   
   <p class="title">CNN with MNIST + PyTorch</p>
   <div class="item">
-    <canvas id="input"></canvas>
+    <canvas width ="300" height="300" id="input"></canvas>
     <script src="{% static 'js/script.js' %}"></script>
     <button id="clear">Clear</button>
-    <button onclick="pred()" id="predict">Predict</button>
+    <button id="predict">Predict</button>
     <p><span id="status"></span></p>
   </div>
   

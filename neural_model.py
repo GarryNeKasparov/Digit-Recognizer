@@ -1,5 +1,6 @@
+import torch
 import torch.nn as nn
-
+from pathlib import Path
 
 class Model(nn.Module):
   def __init__(self):
@@ -28,3 +29,10 @@ class Model(nn.Module):
 
     return pred
         
+def get_model():
+  weight = Path('model_params/model.pth')
+  model = Model()
+  model.load_state_dict(torch.load(weight, map_location='cpu'))
+  model.eval()
+
+  return model
