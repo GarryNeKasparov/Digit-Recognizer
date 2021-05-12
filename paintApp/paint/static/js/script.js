@@ -11,14 +11,14 @@ window.addEventListener("load", function onWindowLoad() {
     document.getElementById("clear").onclick = function c() {
         context.clearRect(0, 0, canvas.width, canvas.height);
         var status = document.getElementById("status");
-        status.innerHTML = "Hello";
+        status.innerHTML = "Draw a digit";
     };
     document.getElementById("predict").onclick = function pred() {
-        //var image = context.toDataURL("image.png");
-        //document.querySelector('.image').src = image;
-        var status = document.getElementById("status")
-        status.innerHTML = "I think it's"
-        //console.log("hello");
+        $('form input[name=data]').val(canvas.toDataURL("image.png"));
+        $('form').submit();
+        var status = document.getElementById("status");
+        status.innerHTML = "I think it's";
+        
     };
     canvas.onmousemove = function drawIfPressed (e) {
         var x = e.offsetX;

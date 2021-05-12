@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html>
-  
+
 <head>
+  <script src="https://yastatic.net/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function c() {
+      var status = document.getElementById("status");
+      status.innerHTML = "Draw a digit";
+    }
+  </script>
   {% load static %}
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
   <title>
@@ -9,17 +16,20 @@
   </title>
 </head>
 
-<body>
-  
+<body onload="c()">
+
   <p class="title">CNN with MNIST + PyTorch</p>
   <div class="item">
-    <canvas width ="300" height="300" id="input"></canvas>
+    <canvas width="300" height="300" id="input"></canvas>
     <script src="{% static 'js/script.js' %}"></script>
     <button id="clear">Clear</button>
-    <button id="predict">Predict</button>
+    <form method="POST">
+      <input type="button" id="predict" value="Predict">
+      <input type="hidden" name="data" value="">
+    </form>
     <p><span id="status"></span></p>
   </div>
-  
+
 
 </body>
 
