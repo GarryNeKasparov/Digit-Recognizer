@@ -2,22 +2,21 @@ window.addEventListener("load", function onWindowLoad() {
     var canvas = document.getElementById("input");
     var context = canvas.getContext("2d");
     
-    //context.fillStyle = "white";
+    context.fillStyle = "white";
     context.lineCap = "round";
-    context.lineWidth = 8;
-    //context.fillRect(0, 0, canvas.width, canvas.height)
-
+    context.lineWidth = 16;
+    context.fillRect(0, 0, canvas.width, canvas.height)
 
     document.getElementById("clear").onclick = function c() {
         context.clearRect(0, 0, canvas.width, canvas.height);
-        var status = document.getElementById("status");
-        status.innerHTML = "Draw a digit";
+        //var status = document.getElementById("status");
+        //status.innerHTML = "Draw a digit";
     };
     document.getElementById("predict").onclick = function pred() {
         $('form input[name=data]').val(canvas.toDataURL("image.png"));
         $('form').submit();
-        var status = document.getElementById("status");
-        status.innerHTML = "I think it's";
+        //var status = document.getElementById("status");
+        //status.innerHTML = "I think it's";
         
     };
     canvas.onmousemove = function drawIfPressed (e) {
