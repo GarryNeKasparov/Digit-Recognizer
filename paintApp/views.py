@@ -1,12 +1,10 @@
-from os import rename
-from django.http.response import HttpResponse
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 import re
 import base64
 from .neural_model import get_model
 from io import BytesIO
-from PIL import Image, ImageOps, ImageChops
+from PIL import Image, ImageOps
 import numpy as np
 import torch.nn.functional as F
 from torchvision import transforms
