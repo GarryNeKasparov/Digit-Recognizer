@@ -23,7 +23,7 @@ def index(request):
         image_data = BytesIO(image_data)
         im = Image.open(image_data)
         #im.show()
-        pred = predict(im)
+        pred = predict(im) #add if picture is NULL
         context = {
             "canvasdata" : pred
         }
@@ -37,7 +37,7 @@ def predict(img):
     transform = transforms.Compose([transforms.ToTensor(),
                                 transforms.Normalize((0.5,), (0.5,)),])
     model = get_model()
-    img = _centering_img(img)
+    #img = center(img)
     img = img.convert('L')
     img = ImageOps.invert(img)
 
@@ -56,3 +56,6 @@ def predict(img):
             m = float(p)
             l = label
     return l
+
+#def center(image):
+    

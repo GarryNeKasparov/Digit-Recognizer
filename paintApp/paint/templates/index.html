@@ -2,12 +2,6 @@
 <html>
 <head>
   <script src="https://yastatic.net/jquery/3.3.1/jquery.min.js"></script>
-  <script>
-    function c() {
-      var status = document.getElementById("status");
-      status.innerHTML = "Draw a digit";
-    }
-  </script>
   {% load static %}
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
   <title>
@@ -28,8 +22,8 @@
       <input type="button" id="predict" value="Predict">
       <input type="hidden" name="data" value="">
     </form>
-    <p>
-      <input type="button" id="predict" value="{{ canvasdata }}"></button></p>
+    <p align="center"> Result: </p>
+      <p class="result">{{ canvasdata }}</p>
   </div>
 
 
