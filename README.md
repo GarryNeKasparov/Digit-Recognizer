@@ -1,4 +1,4 @@
 # Digit-Recognizer
-Yeah, yeah so not ordinary
+This is simple digit recognizer built on PyTorch: custom CNN with 2 conv layers and 2 linear.
 
-I will try to build an app with NN
+Deployed on [Heroku](https://garryrecognizer.herokuapp.com/paint/)
