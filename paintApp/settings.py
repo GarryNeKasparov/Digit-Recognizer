@@ -26,9 +26,12 @@ SECRET_KEY = 'cwggq3&_63-2!1o4(rq9)$p^-+ubk*(^n^uc*jhhl&rjt&%!dy'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '0.0.0.0'
-    'garryrecognizer.herokuapp.com',
-    '127.0.0.1'
+    '*',
+   'http://garry.herokuapp.com/',
+   'https://garry.herokuapp.com/',
+   'garry.herokuapp.com',
+   'garry.herokuapp.com/',
+   '127.0.0.1',
 ]
 
 
